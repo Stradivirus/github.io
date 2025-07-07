@@ -18,7 +18,15 @@
             <nav class="nav-links-vertical">
                 <a href="{{ '/' | relative_url }}">홈</a>
                 <a href="{{ '/about' | relative_url }}">소개</a>
-                <a href="{{ '/posts' | relative_url }}">포스트</a>
+                <div class="accordion">
+                  <button class="accordion-toggle" onclick="this.classList.toggle('active');var p=document.getElementById('post-list');p.style.display=p.style.display==='block'?'none':'block';return false;">포스트 ▼</button>
+                  <ul id="post-list" class="accordion-list" style="display:none;">
+                    {% assign posts = site.posts | sort: 'date' | reverse %}
+                    {% for post in posts limit:10 %}
+                      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
             </nav>
         </aside>
         <main class="page-content-vertical">
