@@ -1,7 +1,7 @@
 title: "My GitHub Blog"
 description: "개발자의 기술 블로그입니다"
 baseurl: ""
-url: "https://username.github.io" # 여기에 실제 GitHub 사용자명을 넣으세요
+url: "https://stradivirus.github.io" # 여기에 실제 GitHub 사용자명을 넣으세요
 
 # Jekyll 테마 설정
 theme: minima
