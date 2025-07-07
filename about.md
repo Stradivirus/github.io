@@ -5,7 +5,7 @@ title: "소개"
 
 # 소개
 
-안녕하세요! 개발자 블로그에 오신 것을 환영합니다.
+안녕하세요! 문쫑의 깃헙 블로그에 오신 것을 환영합니다.
 
 ## 저에 대해
 
@@ -13,7 +13,7 @@ title: "소개"
 
 ## 관심 분야
 
-- **웹 개발**: React, Vue.js, Node.js
+- **웹 개발**: React
 - **백엔드 개발**: Python, FastAPI, Django
 - **데이터베이스**: PostgreSQL, MongoDB
 - **DevOps**: Docker, GitHub Actions
@@ -21,8 +21,8 @@ title: "소개"
 
 ## 연락처
 
-- **GitHub**: [여기에 GitHub 링크](https://github.com/username)
-- **Email**: your.email@example.com
+- **GitHub**: [여기에 GitHub 링크](https://github.com/stradivirus)
+- **Email**: stradivirus9@gmail.com
 
 ## 이 블로그에서 다루는 내용
 
