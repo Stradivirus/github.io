@@ -5,41 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    
-    <!-- Jekyll Feed -->
     {% feed_meta %}
-    
-    <!-- Jekyll SEO Tag -->
     {% seo %}
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrapper">
-            <nav class="site-nav">
+    <div class="main-layout">
+        <aside class="side-nav">
+            <div class="site-title-area">
                 <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-                <div class="nav-links">
-                    <a href="{{ '/' | relative_url }}">홈</a>
-                    <a href="{{ '/about' | relative_url }}">소개</a>
-                    <a href="{{ '/posts' | relative_url }}">포스트</a>
-                </div>
+            </div>
+            <nav class="nav-links-vertical">
+                <a href="{{ '/' | relative_url }}">홈</a>
+                <a href="{{ '/about' | relative_url }}">소개</a>
+                <a href="{{ '/posts' | relative_url }}">포스트</a>
             </nav>
-        </div>
-    </header>
-
-    <main class="page-content">
-        <div class="wrapper">
+        </aside>
+        <main class="page-content-vertical">
             {{ content }}
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="wrapper">
-            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: site.title }}. All rights reserved.</p>
-            <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">GitHub Pages</a></p>
-        </div>
-    </footer>
+            <footer class="site-footer">
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: site.title }}. All rights reserved.</p>
+                <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">GitHub Pages</a></p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>

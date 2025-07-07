@@ -15,10 +15,74 @@ body {
     background-color: #fff;
 }
 
-.wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+.main-layout {
+    display: flex;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+.side-nav {
+    width: 220px;
+    min-width: 180px;
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem 1.5rem 2.5rem 0;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 2px 0 8px rgba(44,62,80,0.04);
+    margin-right: 2.5rem;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.site-title-area {
+    margin-bottom: 2.5rem;
+}
+
+.site-title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.nav-links-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.nav-links-vertical a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links-vertical a:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.page-content-vertical {
+    flex: 1 1 0;
+    background: #fff;
+    border-radius: 16px;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    min-width: 0;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -175,11 +239,12 @@ body {
 
 /* Footer */
 .site-footer {
-    background: #34495e;
-    color: white;
+    background: none;
+    color: #888;
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
+    padding: 2rem 0 0 0;
+    margin-top: auto;
+    font-size: 0.95rem;
 }
 
 .site-footer a {
@@ -213,6 +278,38 @@ body {
     
     .wrapper {
         padding: 0 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .side-nav {
+        flex-direction: row;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        border-radius: 0 0 20px 20px;
+        margin-right: 0;
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        align-items: center;
+        justify-content: flex-start;
+        position: static;
+    }
+    .site-title-area {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+    .nav-links-vertical {
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+    .page-content-vertical {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        border-radius: 0 0 16px 16px;
     }
 }
 
