@@ -1,0 +1,252 @@
+---
+---
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Main content */
+.page-content {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+}
+
+/* Posts */
+.post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.post-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.post-content h1, .post-content h2, .post-content h3 {
+    color: #2c3e50;
+    margin-top: 2rem;
+}
+
+.post-content h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content ul, .post-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Code highlighting */
+.post-content pre {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.post-content code {
+    background: #f8f8f8;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.post-content pre code {
+    background: none;
+    padding: 0;
+}
+
+/* Tags and categories */
+.post-tags {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.tag, .category {
+    background: #3498db;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+/* Post navigation */
+.post-navigation {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev-post, .next-post {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.prev-post:hover, .next-post:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* Footer */
+.site-footer {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.site-footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        margin: 0 1rem;
+    }
+    
+    .post-title {
+        font-size: 2rem;
+    }
+    
+    .post-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .wrapper {
+        padding: 0 15px;
+    }
+}
+
+/* Home page specific styles */
+.home-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-list li {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.post-link {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.post-link:hover {
+    color: #3498db;
+}

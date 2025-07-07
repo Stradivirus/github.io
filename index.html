@@ -1,1 +1,76 @@
-Hello GitHub Pages!
+---
+layout: home
+title: "홈"
+---
+
+<div class="home-content">
+  <h1>안녕하세요! 👋</h1>
+  <p>개발자의 기술 블로그에 오신 것을 환영합니다.</p>
+  
+  <div class="intro-section">
+    <h2>최근 포스트</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit:5 %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div class="about-section">
+    <h2>소개</h2>
+    <p>
+      이 블로그는 개발 경험, 기술 학습 내용, 그리고 프로젝트에 대한 
+      이야기들을 공유하는 공간입니다.
+    </p>
+  </div>
+</div>
+
+<style>
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.intro-section, .about-section {
+  margin: 2rem 0;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.post-link {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.post-link:hover {
+  color: #3498db;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+</style>
